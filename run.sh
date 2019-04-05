@@ -1,5 +1,14 @@
 #!/bin/sh
 
+# allow image to be used with docker secrets
+if [ -f /run/secrets/nc_user ]; then
+	read NC_USER < /run/secrets/nc_user
+fi
+
+if [ -f /run/secrets/nc_pass ]; then
+	read NC_PASS < /run/secrets/nc_pass
+fi
+
 # ensure, that the sync dir exists and is owned by the user
 [ -d $NC_SYNC_DIR ] || mkdir -p $NC_SYNC_DIR
 	if [  ! "$NC_SILENT" = true ] ; then 
