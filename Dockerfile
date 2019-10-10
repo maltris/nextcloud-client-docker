@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.6
 LABEL maintainer="juanignacioborda@gmail.com"
 ARG VCS_REF
 ARG BUILD_DATE

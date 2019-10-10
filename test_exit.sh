@@ -60,7 +60,7 @@ case $ret in
 esac
  
 docker run -it --rm \
- -v $(pwd)/sync-folder:/media/nextcloud \
+ -v $(pwd)/sync-folder:/media/nextcloud:alpine_3.6 \
  -e NC_USER=$username -e NC_PASS=$password \
  -e NC_URL=$nextcloudserver\
  -e NC_EXIT=true\
